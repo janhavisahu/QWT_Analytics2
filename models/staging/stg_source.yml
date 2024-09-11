@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw
+    database: QWT_Analytics
+    tables:
+      - name: customers
+      - name: products

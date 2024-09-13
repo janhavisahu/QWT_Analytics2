@@ -3,6 +3,10 @@ version: 2
 sources:
   - name: raw
     database: QWT_Analytics
+    schema: raw
     tables:
       - name: customers
       - name: products
+      - name: EMPLOYEES
+      - name: orders
+      - name: order_details

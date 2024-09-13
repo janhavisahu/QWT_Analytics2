@@ -1,0 +1,6 @@
+version: 2
+
+seeds:
+  - name: lpk_divisions
+    config:
+      schema: seeds

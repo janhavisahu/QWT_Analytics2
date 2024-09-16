@@ -4,3 +4,6 @@ seeds:
   - name: lpk_divisions
     config:
       schema: seeds
+  - name: lpk_categories
+    config:
+      schema: seeds

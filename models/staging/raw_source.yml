@@ -7,6 +7,7 @@ sources:
     tables:
       - name: customers
       - name: products
-      - name: EMPLOYEES
+      - name: employees
       - name: orders
       - name: order_details
+      - name: office

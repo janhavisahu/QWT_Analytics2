@@ -1,4 +1,4 @@
-{{ config(materialized="table", schema = 'transform') }}
+{{ config(materialized="view", schema = 'transform') }}
 
 select
     *,

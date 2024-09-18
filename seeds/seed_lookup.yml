@@ -1,0 +1,12 @@
+version: 2
+
+seeds:
+  - name: lpk_divisions
+    config:
+      schema: seeds
+  - name: lpk_categories
+    config:
+      schema: seeds
+  - name: lpk_shippers
+    config:
+      schema: seeds

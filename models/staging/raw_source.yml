@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: raw
+    database: QWT_Analytics
+    schema: raw
+    tables:
+      - name: customers
+      - name: products
+      - name: employees
+      - name: orders
+      - name: order_details
+      - name: office
+      - name: shipments
+      - name: contacts
+        identifier: contacts_json
+      - name: suppleir
+        identifier: supplier_xml

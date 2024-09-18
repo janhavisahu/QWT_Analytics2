@@ -7,3 +7,6 @@ seeds:
   - name: lpk_categories
     config:
       schema: seeds
+  - name: lpk_shippers
+    config:
+      schema: seeds

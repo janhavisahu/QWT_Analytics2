@@ -11,3 +11,8 @@ sources:
       - name: orders
       - name: order_details
       - name: office
+      - name: shipments
+      - name: contacts
+        identifier: contacts_json
+      - name: suppleir
+        identifier: supplier_xml

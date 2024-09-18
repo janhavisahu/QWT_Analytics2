@@ -42,4 +42,7 @@ models:
       +materialized: table
     transform:
       +materialized: table
-      +schema: tranform
+      +schema: transform
+
+vars:
+  city: 'paris'

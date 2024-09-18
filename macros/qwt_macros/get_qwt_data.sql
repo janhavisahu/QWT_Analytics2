@@ -1,18 +1,20 @@
 {% macro get_order_lineno() -%}
 
-    {% set line__query %}
-
-select Distinct lineno
+    {% set lineno__query %}
+   select Distinct lineno
 from {{ ref('stg_order_details')}}
-order by 1
+order by lineno
     {% endset %}
 
     {% set results = run_query(lineno__query) %}
 
-    {% if execute %}
+    {% if results %}
         {# Return the first column #}
         {% set results_list = results.columns[0].values() %}
-    {% else %} {% set results_list = [] %}
+    {% else %} 
+    
+    {% set results_list = [] %}
+
     {% endif %}
 
     {{ return(results_list) }}

@@ -5,4 +5,6 @@ packages:
     version: 0.10.1
   - package: calogica/dbt_date
     version: 0.10.1
-sha1_hash: 6c050466969a07a8d13052b69ff456d279f4d26f
+  - package: brooklyn-data/dbt_artifacts
+    version: 2.6.4
+sha1_hash: e14fd58c5c8954db12280c01f58b3c2b9a008e91

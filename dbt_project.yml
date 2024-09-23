@@ -37,12 +37,23 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   my_new_project:
+    pre-hook:
+      - "GRANT ALL ON schema {{ schema }} to ROLE test_role;"
+      - "insert into qwt_audit.qwt_audit_info values( '{{ this }}', current_timestamp(),Null,Null)"
+    post-hook:
+      - "update qwt_audit.qwt_audit_info set end_time = current_timestamp(), duration = datediff('second',start_time,current_timestamp()) where modelname = '{{this}}'"
+
     # Applies to all files under models/example/
     staging:
       +materialized: table
     transform:
       +materialized: table
       +schema: transform
+
+on-run-start: 
+  - "GRANT ALL ON DATABASE QWT_ANALYTICS to ROLE test_role;"
+  - "GRANT ALL ON ALL TABLES IN SCHEMA QWT_ANALYTICS.DBT_DEV to ROLE test_role;"
+# on-run-end: "{{ dbt_artifacts.upload_results(results) }}"
 
 vars:
   city: 'paris'

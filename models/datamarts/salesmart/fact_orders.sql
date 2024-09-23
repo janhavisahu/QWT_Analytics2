@@ -1,5 +1,6 @@
 {{ config(
-    materialized='view', schema = 'salesmart'
+    materialized='view', schema = 'salesmart',
+    pre_hook= ['GRANT SELECT ON {{ this }} TO ROLE test_role;']
 )}}
 
 select od.*,

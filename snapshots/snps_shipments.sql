@@ -3,10 +3,10 @@
 {{ config(
     schema = 'snapshot',
     unique_key="ORDERID||'-'||LINENO",
-    strategy='timestamp',
-    updated_at='SHIPMENTDATE'
+    strategy='check',
+    check_cols=['SHIPMENTDATE','PRODUCTID']
 )}}
 
-select * from {{ ref('stg_shipments')}}
+select * from {{ ref('stg_shipments')}} 
 
 {% endsnapshot %}

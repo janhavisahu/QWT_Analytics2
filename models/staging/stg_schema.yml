@@ -29,24 +29,24 @@ models:
             description: "zip code"
           - name: STATEPROVINCE
             description: "state province"
-    - name: stg_products
-      description: "stage product table"
-      columns:
-          - name: ProductID
-            description: "product id"
-          - name: ProductName
-            description: "product name"
-          - name: SupplierID
-            description: "supplier id"
-          - name: CategoryID
-            description: "category id"
-          - name: QuantityPerUnit
-            description: "quantity per unit"
-          - name: UnitCost
-            description: "unit code"
-          - name: UnitPrice
-            description: "unit price"
-          - name: UnitsInStock
-            description: "unit in stock"
-          - name: UnitsOnOrder
-            description: "Units order"
+    # - name: stg_products
+    #   description: "stage product table"
+    #   columns:
+    #       - name: ProductID
+    #         description: "product id"
+    #       - name: ProductName
+    #         description: "product name"
+    #       - name: SupplierID
+    #         description: "supplier id"
+    #       - name: CategoryID
+    #         description: "category id"
+    #       - name: QuantityPerUnit
+    #         description: "quantity per unit"
+    #       - name: UnitCost
+    #         description: "unit code"
+    #       - name: UnitPrice
+    #         description: "unit price"
+    #       - name: UnitsInStock
+    #         description: "unit in stock"
+    #       - name: UnitsOnOrder
+            # description: "Units order"
